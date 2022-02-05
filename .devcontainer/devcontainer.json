@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.159.0/containers/javascript-node
+{
+	"name": "Dendron",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a erlang version: alpine, 23.2.7.0, ...
+		"args": { "VARIANT": "latest" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"userEnvProbe": "none",
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"eamodio.gitlens",
+		"jpotterm.simple-vim"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [3000],
+}
